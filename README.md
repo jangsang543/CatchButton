@@ -8,6 +8,8 @@
 - 버튼을 잡았을 때 버튼을 클릭하면 “축하합니다~!” 라고 메시지박스를 띄움.
 - 버튼을 클릭하면 100점추가, 도망가면 10점 감점하여 점수를 계산하고, 점수는 폼 제목에 표시.
 - 클릭에 성공할 때마다 버튼의 크기를 10%씩 작게 크기를 축소.
+- 20번놓치면 "Game Over" 메시지를 출력하고, 모든 버튼을 비활성화 처리.
+- 게임 관련된 모든 정보를 초기화하고, 처음 하는 것처럼 게임을 다시 시작하는 '다시 시작' 버튼 구현.
 ---
 
 ## 📷 실행 화면
@@ -36,5 +38,16 @@
 - (클릭에 성공할 때마다 버튼의 크기를 10%씩 작게 크기를 축소.)
 <p>
 <img width="1244" height="824" alt="스크린샷 2026-03-12 171259" src="https://github.com/user-attachments/assets/8faef98f-3974-41f8-9ccb-9da16dc70a3d" />
+</p>
+
+- (20번놓치면 "Game Over" 메시지를 출력하고, 모든 버튼을 비활성화 처리.)
+<p>
+<img width="1246" height="831" alt="스크린샷 2026-03-12 172750" src="https://github.com/user-attachments/assets/ac2f5a95-8852-4bc8-99f7-05c89880771e" />
+</p>
+
+- (게임 관련된 모든 정보를 초기화하고, 처음 하는 것처럼 게임을 다시 시작하는 '다시 시작' 버튼 구현.)
+<p>
+<img width="294" height="136" alt="스크린샷 2026-03-12 173154" src="https://github.com/user-attachments/assets/3f36baca-2028-48a8-93e4-a162be514b15" />
+<img width="155" height="125" alt="스크린샷 2026-03-12 173214" src="https://github.com/user-attachments/assets/dec8dd1c-195e-4a74-ba87-c874ca9debe7" />
 </p>
 
