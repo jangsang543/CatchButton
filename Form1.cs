@@ -29,7 +29,7 @@ namespace CatchButton
 
         private void myButton_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("축하합니다~!");
+            MessageBox.Show("축하합니다~~!");
         }
     }
 }
