@@ -2,6 +2,8 @@ namespace CatchButton
 {
     public partial class Form1 : Form
     {
+        int score = 0; // 초기 점수
+
         public Form1()
         {
             InitializeComponent();
@@ -9,14 +11,15 @@ namespace CatchButton
 
         private void myButton_MouseEnter(object sender, EventArgs e)
         {
-            // 1. 난수생성기준비
-            Random rd = new Random();
+            // 도망가면 점수 감점
+            score -= 10;
 
-            // 2. 가용영역계산(버튼이폼테두리에걸리지않게보호)// ClientSize는타이틀바와테두리를제외한실제흰도화지영역임
+            // 버튼이 완전히 보이도록 가용영역 계산
             int maxX = Math.Max(0, this.ClientSize.Width - myButton.Width);
             int maxY = Math.Max(0, this.ClientSize.Height - myButton.Height);
 
             // 3. 랜덤좌표추출(0 ~ 최대가용치사이)
+            Random rd = new Random();
             int nextX = rd.Next(0, maxX + 1);
             int nextY = rd.Next(0, maxY + 1);
 
@@ -24,12 +27,32 @@ namespace CatchButton
             myButton.Location = new Point(nextX, nextY);
 
             // 5. 시각적피드백(폼제목표시줄에좌표출력)
-            this.Text = $"버튼위치: ({nextX}, {nextY})";
+            this.Text = $"점수: {score} - 버튼위치: ({nextX}, {nextY})";
         }
 
         private void myButton_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("축하합니다~~!");
+            score += 100;
+
+            // 버튼 크기를 10% 축소
+            const double shrinkFactor = 0.9;
+            const int minWidth = 20;
+            const int minHeight = 20;
+
+            int newWidth = Math.Max(minWidth, (int)(myButton.Width * shrinkFactor));
+            int newHeight = Math.Max(minHeight, (int)(myButton.Height * shrinkFactor));
+            myButton.Size = new Size(newWidth, newHeight);
+
+            // 축소 후 버튼이 클라이언트 영역을 벗어나지 않도록 위치 보정
+            int maxX = Math.Max(0, this.ClientSize.Width - myButton.Width);
+            int maxY = Math.Max(0, this.ClientSize.Height - myButton.Height);
+            int correctedX = Math.Min(myButton.Location.X, maxX);
+            int correctedY = Math.Min(myButton.Location.Y, maxY);
+            myButton.Location = new Point(correctedX, correctedY);
+
+            // 제목과 메시지박스에 점수 반영
+            this.Text = $"점수: {score}";
+            MessageBox.Show("축하합니다~~!", $"점수: {score}");
         }
     }
 }
