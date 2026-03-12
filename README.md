@@ -24,3 +24,5 @@
 <p>
 <img width="1127" height="506" alt="스크린샷 2026-03-12 163336" src="https://github.com/user-attachments/assets/b572ca0b-aee8-4f17-ac62-deb2315fcd90" />
 </p>
+버튼이 완전히 보이도록 maxX = ClientSize.Width - myButton.Width, maxY = ClientSize.Height - myButton.Height로 최대 좌표를 제한.
+ClientSize.Width - myButton.Width를 쓰는 이유는 좌표계와 Location이 버튼의 왼쪽 위 모서리(Top‑Left)를 기준으로 하기 때문.
