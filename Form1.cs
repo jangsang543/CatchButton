@@ -19,7 +19,6 @@ namespace CatchButton
             int maxY = Math.Max(0, this.ClientSize.Height - myButton.Height);
 
             // 3. 랜덤좌표추출(0 ~ 최대가용치사이)
-            Random rd = new Random();
             int nextX = rd.Next(0, maxX + 1);
             int nextY = rd.Next(0, maxY + 1);
 
