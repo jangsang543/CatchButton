@@ -42,6 +42,7 @@
             myButton.TabIndex = 0;
             myButton.Text = "나를 잡아봐";
             myButton.UseVisualStyleBackColor = false;
+            myButton.Click += myButton_Click;
             myButton.MouseEnter += myButton_MouseEnter;
             // 
             // Form1
