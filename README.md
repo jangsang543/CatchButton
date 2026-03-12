@@ -51,3 +51,14 @@
 <img width="155" height="125" alt="스크린샷 2026-03-12 173214" src="https://github.com/user-attachments/assets/dec8dd1c-195e-4a74-ba87-c874ca9debe7" />
 </p>
 
+## 🛠 구현 시 어려웠던 점
+1️⃣ 버튼이 랜덤으로 피할 때 자꾸 창 밖으로 나가는 현상이 있어서 이것을 고치는 것이 어려웠었다.<br>
+원래 코드는 버튼의 새 좌표를 0 ~ ClientSize.Width/Height 범위에서 뽑아서 버튼의 왼쪽 위 모서리가 폼의 우하단에 가면 버튼이 창 밖으로 나간다.
+
+<p>
+<img width="1127" height="506" alt="스크린샷 2026-03-12 163336" src="https://github.com/user-attachments/assets/69c527c9-93a1-4e71-b174-59a4f06e7b1b" />
+</p>
+
+위 코드는 알맞게 수정된 코드이다.<br>
+버튼이 완전히 보이려면 왼쪽 위 x가 가질 수 있는 최대값은 버튼의 오른쪽 끝이 클라이언트 우측을 넘지 않게 해야 하므로<br>
+maxX = ClientSize.Width - myButton.Width, maxY = ClientSize.Height - myButton.Height로 최대 좌표를 제한해주면 해결된다.
