@@ -7,6 +7,7 @@
 - 버튼 영역안으로 마우스가 들어가면 버튼을 랜덤위치로 이동.
 - 버튼을 잡았을 때 버튼을 클릭하면 “축하합니다~!” 라고 메시지박스를 띄움.
 - 버튼을 클릭하면 100점추가, 도망가면 10점 감점하여 점수를 계산하고, 점수는 폼 제목에 표시.
+- 클릭에 성공할 때마다 버튼의 크기를 10%씩 작게 크기를 축소.
 ---
 
 ## 📷 실행 화면
@@ -31,3 +32,9 @@
 <img width="285" height="121" alt="스크린샷 2026-03-12 170452" src="https://github.com/user-attachments/assets/40d1677d-dcfe-4e48-b14f-7ea79aed275f" />
 <img width="193" height="221" alt="스크린샷 2026-03-12 170858" src="https://github.com/user-attachments/assets/eca0058e-6a8f-42da-b7a7-4b4288c97059" />
 </p>
+
+- (클릭에 성공할 때마다 버튼의 크기를 10%씩 작게 크기를 축소.)
+<p>
+<img width="1244" height="824" alt="스크린샷 2026-03-12 171259" src="https://github.com/user-attachments/assets/8faef98f-3974-41f8-9ccb-9da16dc70a3d" />
+</p>
+
