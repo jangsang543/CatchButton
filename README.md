@@ -62,3 +62,21 @@
 위 코드는 알맞게 수정된 코드이다.<br>
 버튼이 완전히 보이려면 왼쪽 위 x가 가질 수 있는 최대값은 버튼의 오른쪽 끝이 클라이언트 우측을 넘지 않게 해야 하므로<br>
 maxX = ClientSize.Width - myButton.Width, maxY = ClientSize.Height - myButton.Height로 최대 좌표를 제한해주면 해결된다.
+
+2️⃣ 클릭에 성공할 때마다 버튼의 크기를 10%씩 작게 크기를 축소하는 코드는 검색해서 찾았는데, 코드를 해석하고 이해하는 과정이 힘들었다.
+
+<p>
+<img width="812" height="499" alt="Image" src="https://github.com/user-attachments/assets/30f693fb-4f0b-4e00-94ac-0f59d4a67639" />
+</p>
+
+버튼을 클릭할 때마다 너비/높이는 10%씩 줄어들지만 너무 작아지지 않도록 최소 크기 20x20 픽셀로 제한한다.<br>
+그리고 크기 변경 후 버튼이 폼 밖으로 나가지 않도록 또 다시 현재 크기에 맞게 위치를 보정한다. 점수는 기존처럼 업데이트 되어 메시지박스 제목과 폼 제목에 반영된다.
+
+3️⃣ '다시 시작' 버튼 코드를 넣었을 때, 초기 버튼 크기/위치 저장(initialButtonSize, initialButtonLocation)을 왜 하는지 잘 이해가 안갔다.
+
+<p>
+<img width="583" height="427" alt="Image" src="https://github.com/user-attachments/assets/302a5ad7-ab22-41f8-a620-65cae402a6bc" />
+</p>
+
+간단히 말하자면 "다시시작"했을 때 버튼을 원래대로 돌려놓으려고 저장하는 것이다.<br>
+플레이 중에 버튼은 클릭으로 작아지고(또는 도망가며) 위치가 바뀐다. 그렇기 때문에 초기 상태로 복원하려면 최초의 크기·위치를 알고 있어야 한다.
